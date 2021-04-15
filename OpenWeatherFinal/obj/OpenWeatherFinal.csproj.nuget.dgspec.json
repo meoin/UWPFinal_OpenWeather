@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Michael\\Documents\\NSCC\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj": {}
+    "I:\\School\\Online2\\WindowsC#\\Assignments\\FinalAssignment\\OpenWeatherFinal\\OpenWeatherFinal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Michael\\Documents\\NSCC\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj": {
+    "I:\\School\\Online2\\WindowsC#\\Assignments\\FinalAssignment\\OpenWeatherFinal\\OpenWeatherFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michael\\Documents\\NSCC\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj",
+        "projectUniqueName": "I:\\School\\Online2\\WindowsC#\\Assignments\\FinalAssignment\\OpenWeatherFinal\\OpenWeatherFinal.csproj",
         "projectName": "OpenWeatherFinal",
-        "projectPath": "C:\\Users\\Michael\\Documents\\NSCC\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj",
-        "packagesPath": "C:\\Users\\Michael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michael\\Documents\\NSCC\\OpenWeatherFinal\\OpenWeatherFinal\\obj\\",
+        "projectPath": "I:\\School\\Online2\\WindowsC#\\Assignments\\FinalAssignment\\OpenWeatherFinal\\OpenWeatherFinal.csproj",
+        "packagesPath": "C:\\Users\\owner\\.nuget\\packages\\",
+        "outputPath": "I:\\School\\Online2\\WindowsC#\\Assignments\\FinalAssignment\\OpenWeatherFinal\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Michael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

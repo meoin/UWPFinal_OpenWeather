@@ -19,6 +19,21 @@ namespace OpenWeatherFinal.ViewModels
 
         public string CityName { get; set; }
         public string CityTemperature { get; set; }
+        public string CityState { get; set; }
+        public string CityCountry { get; set; }
+        public string CityFeelsLike { get; set; }
+        public string CityTempMin { get; set; }
+        public string CityTempMax { get; set; }
+        public string CityPressure { get; set; }
+        public string CityHumidity { get; set; }
+        public string CityWindSpeed { get; set; }
+        public string CityWindDirection { get; set; }
+
+        public int CityTime { get; set; }
+        //TODO: VV IMPLEMENT THESE IN CITYMODEL VV
+        public int CitySunrise { get; set; }
+        public int CitySunset { get; set; }
+        //TODO: ^^ IMPLEMENT THESE IN CITYMODEL ^^
 
         public CityViewModel()
         {
@@ -39,16 +54,63 @@ namespace OpenWeatherFinal.ViewModels
                 {
                     CityName = "";
                     CityTemperature = "";
-                }
+                    CityState = "";
+                    CityCountry = "";
+
+                    CityTime = 0;
+                    CitySunrise = 0;
+                    CitySunset = 0;
+                    CityFeelsLike = "";
+                    CityTempMin = "";
+                    CityTempMax = "";
+                    CityPressure = "";
+                    CityHumidity = "";
+                    CityWindSpeed = "";
+                    CityWindDirection = "";
+    }
                 else
                 {
                     CityName = value.Name;
-                    if (value.Main != null) CityTemperature = value.Main.Temp.ToString();
+                    CityState = value.State;
+                    CityCountry = value.Country;
+                    CityTime = value.Time;
+                    
+                    if (value.Main != null)
+                    {
+                        CityTemperature = value.Main.Temp.ToString();
+                        CityFeelsLike = value.Main.Feels_Like.ToString();
+                        CityTempMin = value.Main.Temp_Min.ToString();
+                        CityTempMax = value.Main.Temp_Max.ToString();
+                        CityPressure = value.Main.Pressure.ToString();
+                        CityHumidity = value.Main.Humidity.ToString();
+                        //to be implemented
+                        //CitySunrise = value.Main.Sunrise.toString();
+                        //CitySunset = value.Main.Sunset.toString()
+    }
+
+                    if (value.Wind != null)
+                    {
+                        CityWindSpeed = value.Wind.Speed.ToString();
+                        CityWindDirection = value.Wind.Direction.ToString();
+                    }
+
                 }
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityName"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityTemperature"));
-            }
-        }
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityState"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityCountry"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityFeelsLike"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityTempMin"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityTempMax"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityPressure"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityHumidity"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityWindSpeed"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityWindDirection"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityTime"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CitySunrise"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CitySunset"));
+    }
+}
 
         public void Refresh()
         {

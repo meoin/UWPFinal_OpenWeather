@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-OKJGD3K</Machine>
-    <WindowsUser>Michael</WindowsUser>
+    <Machine>USER</Machine>
+    <WindowsUser>owner</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>d2200861-c02f-4fe3-bf75-3d83830f4a36</PackageIdentityName>
     <PackageIdentityPublisher>CN=Michael</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>AECB011DB2568DE9D15394BF33F708BF1E7A403F39AA78CF2302B28E317E6CE3</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d2200861-c02f-4fe3-bf75-3d83830f4a36_1.0.0.0_x86__eq9h3e6grdrp4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d2200861-c02f-4fe3-bf75-3d83830f4a36_eq9h3e6grdrp4!App</RegisteredUserModeAppID>
@@ -27,18 +27,18 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-04-15T21:29:20.827</Modified>
+      <Modified>2021-04-15T22:21:49.635</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\OpenWeatherFinal.exe">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\bin\x86\Debug\OpenWeatherFinal.exe">
       <PackagePath>entrypoint\OpenWeatherFinal.exe</PackagePath>
-      <Modified>2021-04-15T21:29:20.472</Modified>
+      <Modified>2021-04-15T22:18:54.217</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\owner\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2021-03-17T23:03:36.000</Modified>
     </AppxPackagedFile>
@@ -50,71 +50,71 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-18T22:36:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2021-04-13T17:50:23.078</Modified>
+      <Modified>2021-04-15T21:41:26.143</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2021-02-09T19:37:42.258</Modified>
+      <Modified>2021-04-15T21:41:26.128</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-09T19:37:42.261</Modified>
+      <Modified>2021-04-15T21:41:26.129</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-09T19:37:42.261</Modified>
+      <Modified>2021-04-15T21:41:26.130</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-09T19:37:42.262</Modified>
+      <Modified>2021-04-15T21:41:26.131</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-09T19:37:42.263</Modified>
+      <Modified>2021-04-15T21:41:26.131</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-09T19:37:42.264</Modified>
+      <Modified>2021-04-15T21:41:26.132</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-09T19:37:42.264</Modified>
+      <Modified>2021-04-15T21:41:26.134</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\city.list.json">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\city.list.json">
       <PackagePath>city.list.json</PackagePath>
-      <Modified>2021-04-15T19:12:09.790</Modified>
+      <Modified>2021-04-15T21:41:28.794</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\OpenWeatherFinal.xr.xml">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\bin\x86\Debug\OpenWeatherFinal.xr.xml">
       <PackagePath>OpenWeatherFinal.xr.xml</PackagePath>
-      <Modified>2021-04-15T20:47:33.105</Modified>
+      <Modified>2021-04-15T21:41:28.917</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-04-15T21:29:20.413</Modified>
+      <Modified>2021-04-15T22:21:48.656</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-04-15T21:29:20.413</Modified>
+      <Modified>2021-04-15T22:21:48.657</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2019-03-18T21:33:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-04-15T21:05:09.822</Modified>
+      <Modified>2021-04-15T21:53:28.077</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\Core\OpenWeatherFinal.exe">
+    <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\bin\x86\Debug\Core\OpenWeatherFinal.exe">
       <PackagePath>OpenWeatherFinal.exe</PackagePath>
-      <Modified>2021-04-15T21:29:20.824</Modified>
+      <Modified>2021-04-15T22:21:49.629</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
