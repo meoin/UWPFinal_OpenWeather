@@ -53,35 +53,20 @@ namespace OpenWeatherFinal
             }
         }
 
-        private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             CityModel selected = CVM.SelectedCity;
             // A city is selected (index is 0 or greater)
             if (FileListView.SelectedIndex >= 0)
             {
-                Task.Run(async () =>
-                {
-                    await DataRepo.GetCityInfo(selected.ID);
-                    CVM.SelectedCity = DataRepo.SelectedCity;
-                    CVM.CityTemperature = DataRepo.SelectedCity.Main.Temp.ToString();
-                    ShowContent();
-                }).GetAwaiter();
+                await DataRepo.GetCityInfo(selected.ID);
+                CVM.SelectedCity = DataRepo.SelectedCity;
             }
             // No city is selected (index is -1, indicating no selection)
             else
             {
                 
             }
-        }
-
-        private void ShowContent()
-        {
-            /*string info = CVM.SelectedCity.Name;
-            WeatherInfo.Text = info;*/
-            Debug.WriteLine(CVM.CityName);
-            Debug.WriteLine(CVM.CityTemperature);
-            CityTemp.Text = CVM.CityTemperature.ToString();
-            CVM.Refresh();
         }
     }
 }

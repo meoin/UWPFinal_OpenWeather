@@ -53,8 +53,8 @@ namespace OpenWeatherFinal
 
             SelectedCity = data;
 
-            Debug.WriteLine(SelectedCity.Name);
-            Debug.WriteLine(SelectedCity.Main.Temp);
+            /*Debug.WriteLine(SelectedCity.Name);
+            Debug.WriteLine(SelectedCity.Main.Temp);*/
         }
     }
 }

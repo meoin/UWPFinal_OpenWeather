@@ -11,7 +11,7 @@ namespace OpenWeatherFinal.ViewModels
 {
     public class CityViewModel : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
         public ObservableCollection<CityModel> Cities { get; set; }
         public List<CityModel> _allCities = new List<CityModel>();
         private CityModel _selectedCity;

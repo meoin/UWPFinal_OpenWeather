@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1zZSJbGd0y6TWR9vkEUXnUI5bA4YkoXyGbbeuNMS1R8FtnzaTEF4zBaKQG4ltKv1tNbtAV3RFm+eSOC0+8WfJQ==",
+  "dgSpecHash": "21GydrslRfO8WyUb+svCHUY6jLIMVxCuQK8IXMVHgVzYaWtlbRzlzK4G8+2rY0Dao6OwfK6/aolp44L3UHxbjg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michael\\Documents\\NSCC\\PROG2500_WindowsProgramming\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj",
+  "projectFilePath": "C:\\Users\\Michael\\Documents\\NSCC\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.8-rel-28605-00\\microsoft.net.native.compiler.2.2.8-rel-28605-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.10\\microsoft.net.uwpcoreruntimesdk.2.2.10.nupkg.sha512",

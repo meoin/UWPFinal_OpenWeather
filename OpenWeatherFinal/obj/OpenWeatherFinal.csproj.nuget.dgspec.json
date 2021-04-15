@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Michael\\Documents\\NSCC\\PROG2500_WindowsProgramming\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj": {}
+    "C:\\Users\\Michael\\Documents\\NSCC\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Michael\\Documents\\NSCC\\PROG2500_WindowsProgramming\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj": {
+    "C:\\Users\\Michael\\Documents\\NSCC\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michael\\Documents\\NSCC\\PROG2500_WindowsProgramming\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj",
+        "projectUniqueName": "C:\\Users\\Michael\\Documents\\NSCC\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj",
         "projectName": "OpenWeatherFinal",
-        "projectPath": "C:\\Users\\Michael\\Documents\\NSCC\\PROG2500_WindowsProgramming\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj",
+        "projectPath": "C:\\Users\\Michael\\Documents\\NSCC\\OpenWeatherFinal\\OpenWeatherFinal\\OpenWeatherFinal.csproj",
         "packagesPath": "C:\\Users\\Michael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michael\\Documents\\NSCC\\PROG2500_WindowsProgramming\\OpenWeatherFinal\\OpenWeatherFinal\\obj\\",
+        "outputPath": "C:\\Users\\Michael\\Documents\\NSCC\\OpenWeatherFinal\\OpenWeatherFinal\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
