@@ -1,0 +1,72 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="OpenWeatherFinal.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OpenWeatherFinal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:OpenWeatherFinal.Models"
+    xmlns:viewmodels="using:OpenWeatherFinal.ViewModels"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"                   >
+
+    <Page.DataContext>
+        <viewmodels:CityViewModel/>
+    </Page.DataContext>
+    
+    <Page.Resources>
+        <CollectionViewSource x:ConnectionId='2' 
+            x:Name="CityCollection"                             >
+        </CollectionViewSource>
+
+        <DataTemplate x:ConnectionId='3' x:Name="CityTemplate"                              >
+            <StackPanel x:ConnectionId='4' Orientation="Horizontal" Margin="12">
+                <SymbolIcon Symbol="Page2" Margin="10"></SymbolIcon>
+                <TextBlock x:ConnectionId='5'                     ></TextBlock>
+                <TextBlock Text=" ( "></TextBlock>
+                <TextBlock x:ConnectionId='6'                        ></TextBlock>
+                <TextBlock Text=")"></TextBlock>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Page.TopAppBar>
+        <CommandBar>
+            <AppBarButton x:ConnectionId='7' x:Name="LoadBtn" Icon="Refresh" Label="Refresh"                     AutomationProperties.HelpText="Create new note" ToolTipService.ToolTip="Create new note"/>
+
+            <CommandBar.SecondaryCommands>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.TopAppBar>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" MinWidth="200"/>
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBox x:ConnectionId='10' x:Name="FilterTxt" Grid.Row="0" AutomationProperties.HelpText="Search notes" ToolTipService.ToolTip="Enter text to filter by title"
+                                                                                             
+                 PlaceholderText="Search..."                          />
+            <ScrollViewer Grid.Row="1">
+                <ListView x:ConnectionId='11' x:Name="FileListView" VerticalAlignment="Top" ToolTipService.ToolTip="Click to view note"
+                ItemsSource="{Binding Source={StaticResource CityCollection}}"
+                ItemTemplate="{Binding Source={StaticResource CityTemplate}}"
+                                                                                                           
+                ></ListView>
+            </ScrollViewer>
+        </Grid>
+        <TextBox x:ConnectionId='8' x:Name="CityName" Grid.Row="1" Grid.Column="1"                                           FontSize="32" Margin="40,40,40,682" IsReadOnly="True"></TextBox>
+        <TextBox x:ConnectionId='9' x:Name="CityTemp" Grid.Row="1" Grid.Column="1"                                                  FontSize="32" Margin="40,298,40,433" IsReadOnly="True"></TextBox>
+    </Grid>
+</Page>
+
