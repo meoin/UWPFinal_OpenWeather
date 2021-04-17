@@ -30,13 +30,13 @@
     <AppXManifest Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-04-15T22:21:49.635</Modified>
+      <Modified>2021-04-17T12:35:56.803</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\bin\x86\Debug\OpenWeatherFinal.exe">
       <PackagePath>entrypoint\OpenWeatherFinal.exe</PackagePath>
-      <Modified>2021-04-15T22:18:54.217</Modified>
+      <Modified>2021-04-17T12:34:54.417</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\owner\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -98,11 +98,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-04-15T22:21:48.656</Modified>
+      <Modified>2021-04-17T12:35:55.794</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-04-15T22:21:48.657</Modified>
+      <Modified>2021-04-17T12:35:55.795</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -114,7 +114,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\bin\x86\Debug\Core\OpenWeatherFinal.exe">
       <PackagePath>OpenWeatherFinal.exe</PackagePath>
-      <Modified>2021-04-15T22:21:49.629</Modified>
+      <Modified>2021-04-17T12:35:56.797</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -17,6 +17,10 @@ namespace OpenWeatherFinal.Models
         public string State { get; set; }
         [JsonProperty("country")]
         public string Country { get; set; }
+        [JsonProperty("sunrise")]
+        public int Sunrise { get; set; }
+        [JsonProperty("sunset")]
+        public int Sunset { get; set; }
         [JsonProperty("dt")]
         public int Time { get; set; }
 

@@ -32,6 +32,15 @@ namespace OpenWeatherFinal
 
                 AllCities = c;
 
+                //Checking for time parameter. None found yet!
+                //foreach(CityModel city in AllCities)
+                //{
+                //    if(city.Time != 0)
+                //    {
+                //        Debug.WriteLine("Time found! City: " + city.Name);
+                //    }
+                //}
+
                 /*Debug.WriteLine(AllCities[0].Name);
                 Debug.WriteLine(AllCities[0].Country);
                 Debug.WriteLine(AllCities[0].Coords.Lat);*/

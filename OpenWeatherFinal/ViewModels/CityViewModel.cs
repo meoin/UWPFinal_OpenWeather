@@ -28,12 +28,9 @@ namespace OpenWeatherFinal.ViewModels
         public string CityHumidity { get; set; }
         public string CityWindSpeed { get; set; }
         public string CityWindDirection { get; set; }
-
-        public int CityTime { get; set; }
-        //TODO: VV IMPLEMENT THESE IN CITYMODEL VV
-        public int CitySunrise { get; set; }
-        public int CitySunset { get; set; }
-        //TODO: ^^ IMPLEMENT THESE IN CITYMODEL ^^
+        public string CityTime { get; set; }
+        public string CitySunrise { get; set; }
+        public string CitySunset { get; set; }
 
         public CityViewModel()
         {
@@ -57,9 +54,9 @@ namespace OpenWeatherFinal.ViewModels
                     CityState = "";
                     CityCountry = "";
 
-                    CityTime = 0;
-                    CitySunrise = 0;
-                    CitySunset = 0;
+                    CityTime = "";
+                    CitySunrise = "";
+                    CitySunset = "";
                     CityFeelsLike = "";
                     CityTempMin = "";
                     CityTempMax = "";
@@ -73,8 +70,11 @@ namespace OpenWeatherFinal.ViewModels
                     CityName = value.Name;
                     CityState = value.State;
                     CityCountry = value.Country;
-                    CityTime = value.Time;
-                    
+                    CityTime = ((new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(value.Time)).ToShortDateString();
+                    CitySunrise = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(value.Sunrise).ToShortDateString();
+                    CitySunset = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(value.Sunset).ToShortDateString();
+
+
                     if (value.Main != null)
                     {
                         CityTemperature = value.Main.Temp.ToString();
@@ -83,9 +83,6 @@ namespace OpenWeatherFinal.ViewModels
                         CityTempMax = value.Main.Temp_Max.ToString();
                         CityPressure = value.Main.Pressure.ToString();
                         CityHumidity = value.Main.Humidity.ToString();
-                        //to be implemented
-                        //CitySunrise = value.Main.Sunrise.toString();
-                        //CitySunset = value.Main.Sunset.toString()
     }
 
                     if (value.Wind != null)
