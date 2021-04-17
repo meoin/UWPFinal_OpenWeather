@@ -64,16 +64,24 @@ namespace OpenWeatherFinal.ViewModels
                     CityHumidity = "";
                     CityWindSpeed = "";
                     CityWindDirection = "";
+                    CitySunrise = "";
+                    CitySunset = "";
     }
                 else
                 {
-                    CityName = value.Name;
-                    CityState = value.State;
-                    CityCountry = value.Country;
-                    CityTime = ((new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(value.Time)).ToShortDateString();
-                    CitySunrise = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(value.Sunrise).ToShortDateString();
-                    CitySunset = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(value.Sunset).ToShortDateString();
+                    if (value.Name != null)
+                        CityName = value.Name;
+                    if (value.State != null)
+                        CityState = value.State;
+                    if (value.Country != null)
+                        CityCountry = value.Country;
+                    CityTime = ((new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(value.Time)).ToString();
 
+                    if (value.Sun != null)
+                    {
+                        CitySunrise = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(value.Sun.Sunrise).ToShortTimeString();
+                        CitySunset = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(value.Sun.Sunset).ToShortTimeString();
+                    }
 
                     if (value.Main != null)
                     {

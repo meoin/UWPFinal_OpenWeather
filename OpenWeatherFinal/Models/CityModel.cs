@@ -17,10 +17,7 @@ namespace OpenWeatherFinal.Models
         public string State { get; set; }
         [JsonProperty("country")]
         public string Country { get; set; }
-        [JsonProperty("sunrise")]
-        public int Sunrise { get; set; }
-        [JsonProperty("sunset")]
-        public int Sunset { get; set; }
+
         [JsonProperty("dt")]
         public int Time { get; set; }
 
@@ -35,6 +32,9 @@ namespace OpenWeatherFinal.Models
 
         [JsonProperty("wind")]
         public WindInfo Wind { get; set; }
+
+        [JsonProperty("sys")]
+        public SunInfo Sun { get; set; }
 
         public CityModel(float id, string name, string state, string country, Coordinates coords)
         {
@@ -76,6 +76,14 @@ namespace OpenWeatherFinal.Models
         public float Lon { get; set; }
         [JsonProperty("lat")]
         public float Lat { get; set; }
+    }
+
+    public class SunInfo
+    {
+        [JsonProperty("sunrise")]
+        public int Sunrise { get; set; }
+        [JsonProperty("sunset")]
+        public int Sunset { get; set; }
     }
 
     public class Weather
