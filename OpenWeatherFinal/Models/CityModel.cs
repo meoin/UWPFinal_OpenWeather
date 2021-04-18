@@ -20,6 +20,8 @@ namespace OpenWeatherFinal.Models
 
         [JsonProperty("dt")]
         public int Time { get; set; }
+        [JsonProperty("timezone")]
+        public int Timezone { get; set; }
 
         [JsonProperty("coord")]
         public Coordinates Coords { get; set; }

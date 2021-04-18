@@ -53,7 +53,6 @@ namespace OpenWeatherFinal.ViewModels
                     CityTemperature = "";
                     CityState = "";
                     CityCountry = "";
-
                     CityTime = "";
                     CitySunrise = "";
                     CitySunset = "";
@@ -75,12 +74,12 @@ namespace OpenWeatherFinal.ViewModels
                         CityState = value.State;
                     if (value.Country != null)
                         CityCountry = value.Country;
-                    CityTime = ((new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(value.Time)).ToString();
+                    CityTime = ((new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(value.Time + value.Timezone)).ToString();
 
                     if (value.Sun != null)
                     {
-                        CitySunrise = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(value.Sun.Sunrise).ToShortTimeString();
-                        CitySunset = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(value.Sun.Sunset).ToShortTimeString();
+                        CitySunrise = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(value.Sun.Sunrise + value.Timezone).ToShortTimeString();
+                        CitySunset = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(value.Sun.Sunset + value.Timezone).ToShortTimeString();
                     }
 
                     if (value.Main != null)
@@ -96,7 +95,39 @@ namespace OpenWeatherFinal.ViewModels
                     if (value.Wind != null)
                     {
                         CityWindSpeed = value.Wind.Speed.ToString();
-                        CityWindDirection = value.Wind.Direction.ToString();
+
+                        if (value.Wind.Direction > 348.75 && value.Wind.Direction < 11.25)//convert from degrees to cardinal direction
+                            CityWindDirection = "N";
+                        else if (value.Wind.Direction >= 11.25 && value.Wind.Direction < 33.75)
+                            CityWindDirection = "NNE";
+                        else if (value.Wind.Direction >= 33.75 && value.Wind.Direction <= 56.25)
+                            CityWindDirection = "NE";
+                        else if (value.Wind.Direction > 56.25 && value.Wind.Direction <= 78.75)
+                            CityWindDirection = "ENE";
+                        else if (value.Wind.Direction > 78.75 && value.Wind.Direction < 101.25)
+                            CityWindDirection = "E";
+                        else if (value.Wind.Direction >= 101.25 && value.Wind.Direction < 123.75)
+                            CityWindDirection = "ESE";
+                        else if (value.Wind.Direction >= 123.75 && value.Wind.Direction <= 146.25)
+                            CityWindDirection = "SE";
+                        else if (value.Wind.Direction > 146.25 && value.Wind.Direction <= 168.75)
+                            CityWindDirection = "SSE";
+                        else if (value.Wind.Direction > 168.75 && value.Wind.Direction < 191.25)
+                            CityWindDirection = "S";
+                        else if (value.Wind.Direction >= 191.25 && value.Wind.Direction < 213.75)
+                            CityWindDirection = "SSW";
+                        else if (value.Wind.Direction >= 213.75 && value.Wind.Direction <= 236.25)
+                            CityWindDirection = "SW";
+                        else if (value.Wind.Direction > 236.25 && value.Wind.Direction <= 258.75)
+                            CityWindDirection = "WSW";
+                        else if (value.Wind.Direction > 258.75 && value.Wind.Direction < 281.25)
+                            CityWindDirection = "W";
+                        else if (value.Wind.Direction >= 281.25 && value.Wind.Direction < 303.75)
+                            CityWindDirection = "WNW";
+                        else if (value.Wind.Direction >= 303.75 && value.Wind.Direction <= 326.75)
+                            CityWindDirection = "NW";
+                        else
+                            CityWindDirection = "NNW";
                     }
 
                 }
@@ -114,6 +145,7 @@ namespace OpenWeatherFinal.ViewModels
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityTime"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CitySunrise"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CitySunset"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityTimezone"));
             }
         }
 
