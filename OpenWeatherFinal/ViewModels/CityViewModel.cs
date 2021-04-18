@@ -66,7 +66,7 @@ namespace OpenWeatherFinal.ViewModels
                     CityWindDirection = "";
                     CitySunrise = "";
                     CitySunset = "";
-    }
+                }
                 else
                 {
                     if (value.Name != null)
@@ -85,13 +85,13 @@ namespace OpenWeatherFinal.ViewModels
 
                     if (value.Main != null)
                     {
-                        CityTemperature = value.Main.Temp.ToString();
-                        CityFeelsLike = value.Main.Feels_Like.ToString();
-                        CityTempMin = value.Main.Temp_Min.ToString();
-                        CityTempMax = value.Main.Temp_Max.ToString();
+                        CityTemperature = roundTemp(value.Main.Temp);
+                        CityFeelsLike = "Feels like " + roundTemp(value.Main.Feels_Like);
+                        CityTempMin = roundTemp(value.Main.Temp_Min);
+                        CityTempMax = roundTemp(value.Main.Temp_Max);
                         CityPressure = value.Main.Pressure.ToString();
-                        CityHumidity = value.Main.Humidity.ToString();
-    }
+                        CityHumidity = value.Main.Humidity.ToString() + "%";
+                    }
 
                     if (value.Wind != null)
                     {
@@ -114,8 +114,8 @@ namespace OpenWeatherFinal.ViewModels
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityTime"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CitySunrise"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CitySunset"));
-    }
-}
+            }
+        }
 
         public void Refresh()
         {
@@ -171,6 +171,19 @@ namespace OpenWeatherFinal.ViewModels
                     Cities.Insert(i, resultItem);
                 }
             }
+        }
+
+        public string roundTemp(float temp)
+        {
+            int roundedTemp = (int)Math.Round(temp);
+            string roundedTempStr = roundedTemp.ToString();
+            if (roundedTempStr.Length == 1)
+            {
+                roundedTempStr = "0" + roundedTempStr + "°";
+            }
+            else roundedTempStr = roundedTempStr + "°";
+
+            return roundedTempStr;
         }
     }
 }

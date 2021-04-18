@@ -16,6 +16,8 @@ using OpenWeatherFinal.ViewModels;
 using OpenWeatherFinal.Models;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Windows.UI.ViewManagement;
+using Windows.UI;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -30,7 +32,7 @@ namespace OpenWeatherFinal
         public MainPage()
         {
             this.InitializeComponent();
-
+            ChangeTitleBarColor();
             this.CVM = new CityViewModel();
             
         }
@@ -67,6 +69,29 @@ namespace OpenWeatherFinal
             {
                 
             }
+        }
+
+        private void FilterTxt_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+        private void ChangeTitleBarColor()
+        {
+            ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
+
+            titleBar.BackgroundColor = Colors.LightSlateGray;
+            titleBar.ForegroundColor = Colors.Black;
+            titleBar.ButtonForegroundColor = Colors.Black;
+            titleBar.ButtonBackgroundColor = Colors.LightSlateGray;
+            titleBar.ButtonHoverForegroundColor = Colors.Black;
+            titleBar.ButtonHoverBackgroundColor = Colors.LightCyan;
+            titleBar.ButtonPressedForegroundColor = Colors.Gray;
+            titleBar.ButtonPressedBackgroundColor = Colors.LightSlateGray;
+
+            titleBar.InactiveForegroundColor = Colors.Black;
+            titleBar.InactiveBackgroundColor = Colors.LightSlateGray;
+            titleBar.ButtonInactiveForegroundColor = Colors.Black;
+            titleBar.ButtonInactiveBackgroundColor = Colors.LightSlateGray;
         }
     }
 }

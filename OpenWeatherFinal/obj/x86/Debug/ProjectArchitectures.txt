@@ -1,1 +1,1 @@
-I:\School\Online2\WindowsC#\Assignments\FinalAssignment\OpenWeatherFinal\OpenWeatherFinal.csproj;x86
+C:\Users\taylo\Desktop\Winter 2021\Windows Programming C#\FinalProject\WeatherApp\UWPFinal_OpenWeather\OpenWeatherFinal\OpenWeatherFinal.csproj;x86
