@@ -88,13 +88,13 @@ namespace OpenWeatherFinal.ViewModels
                         CityFeelsLike = "Feels like " + roundTemp(value.Main.Feels_Like);
                         CityTempMin = roundTemp(value.Main.Temp_Min);
                         CityTempMax = roundTemp(value.Main.Temp_Max);
-                        CityPressure = value.Main.Pressure.ToString();
+                        CityPressure = value.Main.Pressure.ToString() + " hPa";
                         CityHumidity = value.Main.Humidity.ToString() + "%";
                     }
 
                     if (value.Wind != null)
                     {
-                        CityWindSpeed = value.Wind.Speed.ToString();
+                        CityWindSpeed = value.Wind.Speed.ToString() + " m/s";
 
                         if (value.Wind.Direction > 348.75 && value.Wind.Direction < 11.25)//convert from degrees to cardinal direction
                             CityWindDirection = "N";
@@ -211,9 +211,9 @@ namespace OpenWeatherFinal.ViewModels
             string roundedTempStr = roundedTemp.ToString();
             if (roundedTempStr.Length == 1)
             {
-                roundedTempStr = "0" + roundedTempStr + "°";
+                roundedTempStr = "0" + roundedTempStr + "°C";
             }
-            else roundedTempStr = roundedTempStr + "°";
+            else roundedTempStr = roundedTempStr + "°C";
 
             return roundedTempStr;
         }
