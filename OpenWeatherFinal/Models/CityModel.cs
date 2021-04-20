@@ -99,4 +99,74 @@ namespace OpenWeatherFinal.Models
         [JsonProperty("icon")]
         public string Icon { get; set; }
     }
+
+    public class WeekForecast
+    {
+        [JsonProperty("daily")]
+        public List<Forecast> Days { get; set; }
+
+        public WeekForecast(List<Forecast> days)
+        {
+            this.Days = days;
+        }
+    }
+
+    public class Forecast
+    {
+        [JsonProperty("dt")]
+        public float Date { get; set; }
+        [JsonProperty("sunrise")]
+        public float Sunrise { get; set; }
+        [JsonProperty("sunset")]
+        public float Sunset { get; set; }
+        [JsonProperty("moonrise")]
+        public float Moonrise { get; set; }
+        [JsonProperty("moonset")]
+        public float Moonset { get; set; }
+        [JsonProperty("temp")]
+        public ForecastTemp Temp { get; set; }
+        [JsonProperty("feels_like")]
+        public ForecastTempFeelsLike FeelsLike { get; set; }
+        [JsonProperty("pressure")]
+        public float Pressure { get; set; }
+        [JsonProperty("humidity")]
+        public float Humidity { get; set; }
+        [JsonProperty("wind_speed")]
+        public float WindSpeed { get; set; }
+        [JsonProperty("clouds")]
+        public float Clouds { get; set; }
+        // pop = probability of precipitation
+        [JsonProperty("pop")]
+        public float Pop { get; set; }
+        [JsonProperty("weather")]
+        public List<Weather> Weather { get; set; }
+    }
+
+    public class ForecastTemp
+    {
+        [JsonProperty("day")]
+        public float Day { get; set; }
+        [JsonProperty("min")]
+        public float Minimum { get; set; }
+        [JsonProperty("max")]
+        public float Maximum { get; set; }
+        [JsonProperty("night")]
+        public float Night { get; set; }
+        [JsonProperty("eve")]
+        public float Evening { get; set; }
+        [JsonProperty("morn")]
+        public float Morning { get; set; }
+    }
+
+    public class ForecastTempFeelsLike
+    {
+        [JsonProperty("day")]
+        public float Day { get; set; }
+        [JsonProperty("night")]
+        public float Night { get; set; }
+        [JsonProperty("eve")]
+        public float Evening { get; set; }
+        [JsonProperty("morn")]
+        public float Morning { get; set; }
+    }
 }

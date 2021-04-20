@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace OpenWeatherFinal.ViewModels
         public List<CityModel> _allCities = new List<CityModel>();
         private CityModel _selectedCity;
         private string _filter;
+        private TimeSpan offset;
 
         public string CityName { get; set; }
         public string CityTemperature { get; set; }
@@ -29,6 +31,7 @@ namespace OpenWeatherFinal.ViewModels
         public string CityWindSpeed { get; set; }
         public string CityWindDirection { get; set; }
         public string CityTime { get; set; }
+        public string UpdateTime { get; set; }
         public string CitySunrise { get; set; }
         public string CitySunset { get; set; }
 
@@ -39,6 +42,7 @@ namespace OpenWeatherFinal.ViewModels
             //Gather text files from the FileRepo retrieval
             DataRepo.GetCitiesFromJSONFile();
             _allCities = DataRepo.AllCities;
+            offset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow);
         }
 
         public CityModel SelectedCity
@@ -74,7 +78,8 @@ namespace OpenWeatherFinal.ViewModels
                         CityState = value.State;
                     if (value.Country != null)
                         CityCountry = value.Country;
-                    CityTime = ((new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(value.Time + value.Timezone)).ToString();
+                    UpdateTime = ((new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(value.Time + offset.TotalSeconds)).ToString();
+                    CityTime = (DateTime.UtcNow.AddSeconds(value.Timezone)).ToShortTimeString();
 
                     if (value.Sun != null)
                     {

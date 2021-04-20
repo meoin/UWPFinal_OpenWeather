@@ -15,6 +15,7 @@ namespace OpenWeatherFinal
     {
         public static List<CityModel> AllCities { get; set; }
         public static CityModel SelectedCity { get; set; }
+        public static WeekForecast SelectedWeekForecast { get; set; }
 
         static DataRepo()
         {
@@ -40,10 +41,6 @@ namespace OpenWeatherFinal
                 //        Debug.WriteLine("Time found! City: " + city.Name);
                 //    }
                 //}
-
-                /*Debug.WriteLine(AllCities[0].Name);
-                Debug.WriteLine(AllCities[0].Country);
-                Debug.WriteLine(AllCities[0].Coords.Lat);*/
             }
         }
 
@@ -53,17 +50,40 @@ namespace OpenWeatherFinal
             string call = $"http://api.openweathermap.org/data/2.5/weather?id={id}&appid={key}&units=metric";
 
             HttpClient client = new HttpClient();
+            string response = await client.GetStringAsync(call);
+
+            try
+            {
+                CityModel data = JsonConvert.DeserializeObject<CityModel>(response);
+                SelectedCity = data;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+        }
+
+        public async static Task GetWeekForecast(float lat, float lon)
+        {
+            string key = "404b530fa2d3f5cb9a4f858b89d6c4d8";
+            string call = $"http://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=hourly,current,minutely&appid={key}&units=metric";
+
+            HttpClient client = new HttpClient();
 
             string response = await client.GetStringAsync(call);
 
             JsonSerializer js = new JsonSerializer();
 
-            CityModel data = JsonConvert.DeserializeObject<CityModel>(response);
-
-            SelectedCity = data;
-
-            /*Debug.WriteLine(SelectedCity.Name);
-            Debug.WriteLine(SelectedCity.Main.Temp);*/
+            try
+            {
+                WeekForecast data = JsonConvert.DeserializeObject<WeekForecast>(response);
+                SelectedWeekForecast = data;
+                /*Debug.WriteLine(data.Days[0].Temp.Morning);
+                Debug.WriteLine(data.Days[1].Weather[0].Main);*/
+            } catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
         }
     }
 }

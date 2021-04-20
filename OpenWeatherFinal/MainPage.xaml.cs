@@ -34,7 +34,10 @@ namespace OpenWeatherFinal
             this.InitializeComponent();
             ChangeTitleBarColor();
             this.CVM = new CityViewModel();
-            
+
+            var offset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow);
+
+            DataRepo.GetWeekForecast(44.6453f, -63.5724f);
         }
 
         private void Load_Button(object sender, RoutedEventArgs e)
@@ -49,7 +52,7 @@ namespace OpenWeatherFinal
 
         private void Search_KeyDown(object sender, KeyRoutedEventArgs e)
         {
-            if (e.Key == Windows.System.VirtualKey.Enter && FilterTxt.Text.Length >= 4)
+            if (e.Key == Windows.System.VirtualKey.Enter && FilterTxt.Text.Length >= 3)
             {
                 CVM.PerformFiltering();
             }
@@ -63,6 +66,7 @@ namespace OpenWeatherFinal
             {
                 await DataRepo.GetCityInfo(selected.ID);
                 CVM.SelectedCity = DataRepo.SelectedCity;
+                Debug.WriteLine(CVM.SelectedCity.Weather[0].Main);
             }
             // No city is selected (index is -1, indicating no selection)
             else
@@ -92,6 +96,11 @@ namespace OpenWeatherFinal
             titleBar.InactiveBackgroundColor = Colors.LightSlateGray;
             titleBar.ButtonInactiveForegroundColor = Colors.Black;
             titleBar.ButtonInactiveBackgroundColor = Colors.LightSlateGray;
+        }
+
+        private void WeekForecast_Button(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(WeekForecastPage));
         }
     }
 }

@@ -233,3 +233,15 @@ C:\Users\taylo\Desktop\Winter 2021\Windows Programming C#\OpenWeather\UWPFinal_O
 C:\Users\taylo\Desktop\Winter 2021\Windows Programming C#\OpenWeather\UWPFinal_OpenWeather\OpenWeatherFinal\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\taylo\Desktop\Winter 2021\Windows Programming C#\OpenWeather\UWPFinal_OpenWeather\OpenWeatherFinal\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885418160000000.json
 C:\Users\taylo\Desktop\Winter 2021\Windows Programming C#\OpenWeather\UWPFinal_OpenWeather\OpenWeatherFinal\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885454160000000.json
+C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\obj\x86\Debug\OpenWeatherFinal.csprojAssemblyReference.cache
+C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885418160000000.json
+C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\HourlyForecastPage.xbf
+C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\WeekForecastPage.xbf
+C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\obj\x86\Debug\HourlyForecastPage.g.i.cs
+C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\obj\x86\Debug\HourlyForecastPage.g.cs
+C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\obj\x86\Debug\WeekForecastPage.g.i.cs
+C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\obj\x86\Debug\WeekForecastPage.g.cs
+C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\obj\x86\Debug\HourlyForecastPage.xaml
+C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\obj\x86\Debug\WeekForecastPage.xaml
+C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\obj\x86\Debug\HourlyForecastPage.xbf
+C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\obj\x86\Debug\WeekForecastPage.xbf

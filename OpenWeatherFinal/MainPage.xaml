@@ -8,7 +8,8 @@
     xmlns:models="using:OpenWeatherFinal.Models"
     xmlns:viewmodels="using:OpenWeatherFinal.ViewModels"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Load">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Load"
+    RequestedTheme="Light">
 
     <Page.DataContext>
         <viewmodels:CityViewModel/>
@@ -71,9 +72,10 @@
                 <RowDefinition Height="35" />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <TextBox x:Name="FilterTxt" AutomationProperties.HelpText="Search Cities" ToolTipService.ToolTip="Enter text to filter by City"
+            <TextBox x:Name="FilterTxt" AutomationProperties.HelpText="Search Cities" ToolTipService.ToolTip="Type at least three characters and hit enter to search cities"
                  Text="{x:Bind CVM.Filter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                  PlaceholderText="Search by city..." KeyDown="Search_KeyDown" TextChanged="FilterTxt_TextChanged" FontSize="16" Height="35" VerticalAlignment="Center" Background="White" />
+            
             <ScrollViewer Grid.Row="1" Background="AliceBlue">
                 <ListView x:Name="FileListView" VerticalAlignment="Top" ToolTipService.ToolTip="Click to view cty"
                 ItemsSource="{Binding Source={StaticResource CityCollection}}"
@@ -94,7 +96,6 @@
         <Grid Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="1">
             <StackPanel Orientation="Horizontal">
                 <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE121;" FontSize="60" Margin="0,35,0,0" />
-                <TextBlock Text="As of" FontSize="20" Margin="20,55,0,0" />
                 <TextBlock Text="{x:Bind CVM.CityTime, Mode=TwoWay}" FontSize="20" Margin="10,55,0,0" />
             </StackPanel>
         </Grid>
@@ -122,9 +123,15 @@
                 <TextBlock x:Name="CityTemp" Text="{x:Bind CVM.CityTemperature, Mode=TwoWay}" FontSize="66"  Margin="-23,50,0,0" Width="145"/>
                 <TextBlock x:Name="CityFeelsLike" Text="{x:Bind CVM.CityFeelsLike, Mode=TwoWay}" FontSize="14" Margin="100,70,0,0"/>
                 <StackPanel Orientation="Horizontal" Margin="-10,30,0,0">
-                    <TextBox x:Name="CityTempMin" BorderThickness="0" Header="Temp(min)" TextAlignment="Center" Text="{x:Bind CVM.CityTempMin, Mode=TwoWay}" FontSize="20" Margin="25,0,0,0" IsReadOnly="True" Background="LightBlue"/>
+                    <StackPanel Orientation="Vertical" Width="150">
+                        <TextBlock x:Name="TempMinTitle" TextAlignment="Center" Text="Temp(min)" FontSize="20"/>
+                        <TextBlock x:Name="CityTempMin" TextAlignment="Center" Text="{x:Bind CVM.CityTempMin, Mode=TwoWay}" FontSize="20" Height="50"/>
+                    </StackPanel>
                     <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE199;" FontSize="50" Margin="0,10,0,0"/>
-                    <TextBox x:Name="CityTempMax" BorderThickness="0" Header="Temp(max)" TextAlignment="Center" Text="{x:Bind CVM.CityTempMax, Mode=TwoWay}" FontSize="20" Margin="10,0,0,0" IsReadOnly="True" Background="LightBlue"/>
+                    <StackPanel Orientation="Vertical" Width="150">
+                        <TextBlock x:Name="TempMaxTitle" TextAlignment="Center" Text="Temp(max)" FontSize="20"/>
+                        <TextBlock x:Name="CityTempMax" TextAlignment="Center" Text="{x:Bind CVM.CityTempMax, Mode=TwoWay}" FontSize="20" Height="50"/>
+                    </StackPanel>
                 </StackPanel>
             </StackPanel>
         </Grid>
@@ -147,19 +154,25 @@
         <Grid Grid.Column="2" Grid.Row="2">
             <StackPanel Orientation="Horizontal" Margin="90,65,0,0">
                 <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE16E;" FontSize="60"/>
-                <TextBox x:Name="CityHumidity" BorderThickness="0" Header="Humidity"  Margin="20,-40,0,0" TextAlignment="Right" Text="{x:Bind CVM.CityHumidity, Mode=TwoWay}" FontSize="20" IsReadOnly="True" Background="LightBlue" Height="70"/>
+                <StackPanel Orientation="Vertical" Width="150">
+                    <TextBlock x:Name="HumidityTitle" TextAlignment="Center" Text="Humidity" FontSize="20"/>
+                    <TextBlock x:Name="CityHumidity" TextAlignment="Center" Text="{x:Bind CVM.CityHumidity, Mode=TwoWay}" FontSize="20" Height="50"/>
+                </StackPanel>
             </StackPanel>
         </Grid>
 
         <Grid Grid.Column="3" Grid.Row="2">
             <StackPanel Orientation="Horizontal" Margin="120,65,0,0">
                 <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE148;" FontSize="60" />
-                <TextBox x:Name="CityPressure" BorderThickness="0" Header="   Pressure"  Margin="15,-40,0,0" TextAlignment="Right" Text="{x:Bind CVM.CityPressure, Mode=TwoWay}" FontSize="20" IsReadOnly="True" Background="LightBlue" Height="70"/>
+                <StackPanel Orientation="Vertical" Width="150">
+                    <TextBlock x:Name="PressureTitle" TextAlignment="Center" Text="Pressure" FontSize="20"/>
+                    <TextBlock x:Name="CityPressure" TextAlignment="Center" Text="{x:Bind CVM.CityPressure, Mode=TwoWay}" FontSize="20" Height="50"/>
+                </StackPanel>
             </StackPanel>
         </Grid>
 
         <Grid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2">
-            <Button Content="View 7 day forecast" Margin="50,0,0,0" Width="350" Height="50"></Button>
+            <Button Content="View 7 day forecast" Margin="50,0,0,0" Width="350" Height="50" Click="WeekForecast_Button"></Button>
         </Grid>
 
         <Grid Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2">
@@ -168,6 +181,5 @@
 
         <Grid Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="4" BorderBrush="Black" BorderThickness="1">
         </Grid>
-
     </Grid>
 </Page>
