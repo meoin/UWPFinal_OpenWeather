@@ -111,8 +111,8 @@
         <Grid Grid.Column="1" Grid.Row="1">
             <Ellipse Stroke="Black" StrokeThickness="2" Fill="AliceBlue" Height="190" Width="190" Margin="0,-145,0,0" />
             <StackPanel Orientation="Vertical" Margin="20,0,0,0">
-                <TextBlock x:Name="CityTemp" Text="{x:Bind CVM.CityTemperature, Mode=TwoWay}" FontSize="66"  Margin="-23,50,0,0" Width="145"/>
-                <TextBlock x:Name="CityFeelsLike" Text="{x:Bind CVM.CityFeelsLike, Mode=TwoWay}" FontSize="14" Margin="100,70,0,0"/>
+                <TextBlock x:Name="CityTemp" Text="{x:Bind CVM.CityTemperature, Mode=TwoWay}" FontSize="66"  Margin="-23,55,0,0" Width="145"/>
+                <TextBlock x:Name="CityFeelsLike" Text="{x:Bind CVM.CityFeelsLike, Mode=TwoWay}" FontSize="14" Margin="105,70,0,0"/>
                 <StackPanel Orientation="Horizontal" Margin="-10,30,0,0">
                     <StackPanel Orientation="Vertical" Width="150">
                         <TextBlock x:Name="TempMinTitle" TextAlignment="Center" Text="Temp(min)" FontSize="20"/>
@@ -131,7 +131,7 @@
             <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1CD;" FontSize="60" Margin="30,70,0,0" />
             <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE128;" FontSize="40" Margin="40,80,0,0" />
             <StackPanel Orientation="Vertical" Margin="30,18,0,0">
-                <StackPanel Orientation="Horizontal" Margin="85,40,0,0">
+                <StackPanel Orientation="Horizontal" Margin="85,45,0,0">
                     <TextBlock TextAlignment="Left" Text="Wind Speed: " FontSize="20"/>
                     <TextBlock x:Name="CityWindSpeed" TextAlignment="Right" Text="{x:Bind CVM.CityWindSpeed, Mode=TwoWay}" FontSize="20" Width="100" Margin="-5,0,0,0"/>
                 </StackPanel>
