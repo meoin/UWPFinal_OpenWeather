@@ -53,10 +53,10 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Text" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="FocusVisualSecondaryBrush" />
       <RootProperty Name="SelectionHighlightColor" />

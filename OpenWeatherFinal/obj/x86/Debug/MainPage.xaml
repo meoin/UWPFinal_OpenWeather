@@ -128,14 +128,14 @@
         </Grid>
 
         <Grid Grid.Column="1" Grid.Row="2">
-            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1CD;" FontSize="60" Margin="25,70,0,0" />
-            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE128;" FontSize="40" Margin="35,80,0,0" />
+            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1CD;" FontSize="60" Margin="30,70,0,0" />
+            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE128;" FontSize="40" Margin="40,80,0,0" />
             <StackPanel Orientation="Vertical" Margin="30,18,0,0">
-                <StackPanel Orientation="Horizontal" Margin="75,40,0,0">
+                <StackPanel Orientation="Horizontal" Margin="85,40,0,0">
                     <TextBlock TextAlignment="Left" Text="Wind Speed: " FontSize="20"/>
                     <TextBlock x:ConnectionId='15' x:Name="CityWindSpeed" TextAlignment="Right"                                                FontSize="20" Width="100" Margin="-5,0,0,0"/>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="75,15,0,0">
+                <StackPanel Orientation="Horizontal" Margin="85,15,0,0">
                     <TextBlock Text="Wind Direction:" FontSize="20"/>
                     <TextBlock x:ConnectionId='14' x:Name="CityWindDirection" TextAlignment="Right"                                                    FontSize="20" Width="100" Margin="-30,0,0,0"/>
                 </StackPanel>
@@ -143,7 +143,7 @@
         </Grid>
 
         <Grid Grid.Column="2" Grid.Row="2">
-            <StackPanel Orientation="Horizontal" Margin="90,65,0,0">
+            <StackPanel Orientation="Horizontal" Margin="85,65,0,0">
                 <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE16E;" FontSize="60"/>
                 <StackPanel Orientation="Vertical" Width="150">
                     <TextBlock x:ConnectionId='12' x:Name="HumidityTitle" TextAlignment="Center" Text="Humidity" FontSize="20"/>
@@ -170,7 +170,7 @@
             <Button Content="View 48 hour forecast" Margin="200,0,0,0" Width="350" Height="50" Visibility="Collapsed"></Button>
             
             <StackPanel Margin="200,0,0,0" VerticalAlignment="Center" Orientation="Horizontal">
-                <TextBlock FontSize="16" Text="Updated at: "/>
+                <TextBlock FontSize="16" Text="Updated at: " Margin="0, 0, 10, 0"/>
                 <TextBlock x:ConnectionId='8' FontSize="16"                                            />
             </StackPanel>
             
