@@ -23,10 +23,13 @@
         <DataTemplate x:Name="CityTemplate" x:DataType="models:CityModel">
             <StackPanel Orientation="Horizontal" Margin="12">
                 <SymbolIcon Symbol="Page2" Margin="10"></SymbolIcon>
-                <TextBlock Text="{x:Bind Name}"></TextBlock>
-                <TextBlock Text=" ( "></TextBlock>
-                <TextBlock Text="{x:Bind Country}"></TextBlock>
-                <TextBlock Text=")"></TextBlock>
+                <TextBlock>
+                    <Run Text="{x:Bind Name}"/>
+                    <Run Text="{x:Bind State}"/>
+                    <Run Text="("/>
+                    <Run Text="{x:Bind Country}"/>
+                    <Run Text=")"/>
+                </TextBlock>
             </StackPanel>
         </DataTemplate>
 
@@ -40,18 +43,6 @@
             </Setter>
         </Style>
     </Page.Resources>
-
-    <Page.TopAppBar>
-        <CommandBar>
-            <CommandBar.Content>
-                <TextBlock Text="{x:Bind CVM.CityName, Mode=TwoWay}" Margin="10"></TextBlock>
-            </CommandBar.Content>
-            <AppBarButton x:Name="LoadBtn" Icon="Refresh" Label="Refresh" Click="Load_Button" AutomationProperties.HelpText="Create new note" ToolTipService.ToolTip="Create new note"/>
-
-            <CommandBar.SecondaryCommands>
-            </CommandBar.SecondaryCommands>
-        </CommandBar>
-    </Page.TopAppBar>
 
     <Grid Background="LightBlue">
         <Grid.ColumnDefinitions>
@@ -172,11 +163,17 @@
         </Grid>
 
         <Grid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2">
-            <Button Content="View 7 day forecast" Margin="50,0,0,0" Width="350" Height="50" Click="WeekForecast_Button"></Button>
+            <Button Content="View 7 Day Forecast" Margin="50,0,0,0" Width="350" Height="50" Click="WeekForecast_Button"></Button>
         </Grid>
 
         <Grid Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2">
-            <Button Content="View 48 hour forecast" Margin="200,0,0,0" Width="350" Height="50"></Button>
+            <Button Content="View 48 hour forecast" Margin="200,0,0,0" Width="350" Height="50" Visibility="Collapsed"></Button>
+            
+            <StackPanel Margin="200,0,0,0" VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock FontSize="16" Text="Updated at: " Margin="0, 0, 10, 0"/>
+                <TextBlock FontSize="16" Text="{x:Bind CVM.UpdateTime, Mode=TwoWay}"/>
+            </StackPanel>
+            
         </Grid>
 
         <Grid Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="4" BorderBrush="Black" BorderThickness="1">

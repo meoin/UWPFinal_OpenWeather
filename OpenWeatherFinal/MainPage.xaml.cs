@@ -34,10 +34,6 @@ namespace OpenWeatherFinal
             this.InitializeComponent();
             ChangeTitleBarColor();
             this.CVM = new CityViewModel();
-
-            var offset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow);
-
-            DataRepo.GetWeekForecast(44.6453f, -63.5724f);
         }
 
         private void Load_Button(object sender, RoutedEventArgs e)
@@ -66,7 +62,7 @@ namespace OpenWeatherFinal
             {
                 await DataRepo.GetCityInfo(selected.ID);
                 CVM.SelectedCity = DataRepo.SelectedCity;
-                Debug.WriteLine(CVM.SelectedCity.Weather[0].Main);
+                //Debug.WriteLine(CVM.SelectedCity.Weather[0].Main);
             }
             // No city is selected (index is -1, indicating no selection)
             else

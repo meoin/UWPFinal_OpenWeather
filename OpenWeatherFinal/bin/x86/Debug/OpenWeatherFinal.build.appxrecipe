@@ -173,9 +173,6 @@
     <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\HourlyForecastPage.xbf">
-      <PackagePath>HourlyForecastPage.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>

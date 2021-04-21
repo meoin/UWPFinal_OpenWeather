@@ -78,8 +78,6 @@ namespace OpenWeatherFinal
             {
                 WeekForecast data = JsonConvert.DeserializeObject<WeekForecast>(response);
                 SelectedWeekForecast = data;
-                /*Debug.WriteLine(data.Days[0].Temp.Morning);
-                Debug.WriteLine(data.Days[1].Weather[0].Main);*/
             } catch (Exception e)
             {
                 Debug.WriteLine(e.Message);

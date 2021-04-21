@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-04-20T03:01:31.284</Modified>
+      <Modified>2021-04-21T07:01:05.549</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\OpenWeatherFinal.exe">
       <PackagePath>entrypoint\OpenWeatherFinal.exe</PackagePath>
-      <Modified>2021-04-20T03:01:30.931</Modified>
+      <Modified>2021-04-21T07:01:05.196</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -216,23 +216,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\OpenWeatherFinal.xr.xml">
       <PackagePath>OpenWeatherFinal.xr.xml</PackagePath>
-      <Modified>2021-04-19T22:18:32.735</Modified>
+      <Modified>2021-04-21T07:01:05.112</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-04-20T03:01:30.858</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\HourlyForecastPage.xbf">
-      <PackagePath>HourlyForecastPage.xbf</PackagePath>
-      <Modified>2021-04-20T03:01:30.859</Modified>
+      <Modified>2021-04-21T07:01:05.121</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-04-20T03:01:30.858</Modified>
+      <Modified>2021-04-21T07:01:05.119</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\WeekForecastPage.xbf">
       <PackagePath>WeekForecastPage.xbf</PackagePath>
-      <Modified>2021-04-20T03:01:30.859</Modified>
+      <Modified>2021-04-21T07:01:05.122</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -240,11 +236,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-04-19T23:55:08.977</Modified>
+      <Modified>2021-04-21T06:53:14.517</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Michael\Documents\NSCC\OpenWeatherFinal\OpenWeatherFinal\bin\x86\Debug\Core\OpenWeatherFinal.exe">
       <PackagePath>OpenWeatherFinal.exe</PackagePath>
-      <Modified>2021-04-20T03:01:31.281</Modified>
+      <Modified>2021-04-21T07:01:05.547</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

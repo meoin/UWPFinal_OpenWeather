@@ -67,8 +67,7 @@ namespace OpenWeatherFinal.ViewModels
                     CityHumidity = "";
                     CityWindSpeed = "";
                     CityWindDirection = "";
-                    CitySunrise = "";
-                    CitySunset = "";
+                    UpdateTime = "";
                 }
                 else
                 {
@@ -151,6 +150,7 @@ namespace OpenWeatherFinal.ViewModels
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CitySunrise"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CitySunset"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CityTimezone"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("UpdateTime"));
             }
         }
 
