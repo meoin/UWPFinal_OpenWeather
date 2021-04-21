@@ -86,8 +86,8 @@
 
         <Grid Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="1">
             <StackPanel Orientation="Horizontal">
-                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE121;" FontSize="60" Margin="0,35,0,0" />
-                <TextBlock x:ConnectionId='24'                                           FontSize="20" Margin="10,55,0,0" />
+                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE121;" FontSize="60" Margin="30,35,0,0" />
+                <TextBlock x:ConnectionId='24'                                           FontSize="20" Margin="40,55,0,0" />
             </StackPanel>
         </Grid>
 
@@ -131,7 +131,7 @@
             <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1CD;" FontSize="60" Margin="30,70,0,0" />
             <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE128;" FontSize="40" Margin="40,80,0,0" />
             <StackPanel Orientation="Vertical" Margin="30,18,0,0">
-                <StackPanel Orientation="Horizontal" Margin="85,45,0,0">
+                <StackPanel Orientation="Horizontal" Margin="85,46,0,0">
                     <TextBlock TextAlignment="Left" Text="Wind Speed: " FontSize="20"/>
                     <TextBlock x:ConnectionId='15' x:Name="CityWindSpeed" TextAlignment="Right"                                                FontSize="20" Width="100" Margin="-5,0,0,0"/>
                 </StackPanel>
@@ -147,7 +147,7 @@
                 <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE16E;" FontSize="60"/>
                 <StackPanel Orientation="Vertical" Width="150">
                     <TextBlock x:ConnectionId='12' x:Name="HumidityTitle" TextAlignment="Center" Text="Humidity" FontSize="20"/>
-                    <TextBlock x:ConnectionId='13' x:Name="CityHumidity" TextAlignment="Center"                                               FontSize="20" Height="50"/>
+                    <TextBlock x:ConnectionId='13' x:Name="CityHumidity" TextAlignment="Center"                                               FontSize="20" Height="50" Margin="25,0,0,0"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
