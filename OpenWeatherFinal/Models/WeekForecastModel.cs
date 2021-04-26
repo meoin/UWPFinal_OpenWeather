@@ -26,8 +26,8 @@ namespace OpenWeatherFinal.Models
             float date, float sunrise, float sunset, float tempmax, float tempmin, 
             float pressure, float humidity, float clouds, float prec, string weatherdesc)
         {
-            this.Date = ((new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(date)).Date.ToString("d") +
-                " - " + ((new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(date)).DayOfWeek.ToString();
+            this.Date = ((new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(date)).DayOfWeek.ToString() +
+                "\n" + ((new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(date)).Date.ToString("d");
             this.Sunrise = ((new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(sunrise)).TimeOfDay.ToString("t");
             this.Sunset = ((new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(sunset)).TimeOfDay.ToString("t");
             this.TempMax = tempmax.ToString("0.0") + "°C";

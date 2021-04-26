@@ -34,7 +34,7 @@ namespace OpenWeatherFinal
         {
             base.OnNavigatedTo(e);
 
-            CityName.Text = "7 Day Forecast for " + DataRepo.SelectedCity.Name;
+            CityName.Text = "7-Day Forecast for " + DataRepo.SelectedCity.Name;
 
             FVM = new ForecastViewModel();
             await FVM.LoadForecasts(DataRepo.SelectedCity.Coords.Lat, DataRepo.SelectedCity.Coords.Lon);
